@@ -1,0 +1,32 @@
+jenkins:
+Dev:
+ls
+touch txt1.txt txt2.txt
+ls
+echo "This is my first text file" > txt1.txt
+cat txt1.txt
+date
+ls
+
+test:
+ls
+cp -r /var/lib/jenkins/workspace/Dev/ .
+ls
+cd Dev/
+ls
+cat txt1.txt
+echo "This is my testing file" > txt2.txt
+cat txt2.txt
+date
+cd ..
+
+prod:
+ls
+cp -r /var/lib/jenkins/workspace/test/ .
+ls
+cd test/
+ls
+cd Dev/
+ls
+cat txt1.txt
+cat txt2.txt
